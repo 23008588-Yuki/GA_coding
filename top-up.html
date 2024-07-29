@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <title>Top Up E Wallet</title>
+    <style>
+        * { font-family: Arial, Helvetica, sans-serif; }
+        body { background-color: white ; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .input-box { display: flex; justify-content: center; align-items: center; margin-bottom: 30px; border: 2px solid #ccc; padding: 15px; border-radius: 10px; }
+        .input-box span { font-size: 24px; margin-right: 10px; }
+        .input-box input { border: none; font-size: 24px; width: 150px; text-align: center; outline: none; }
+        .buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 30px; }
+        .buttons button { padding: 15px; border: 2px solid #ccc; background-color: #fff; border-radius: 20px; font-size: 18px; cursor: pointer; transition: background-color 0.3s, border-color 0.3s; }
+        .buttons button:hover { background-color: #e0e0e0; border-color: #999; }
+        .continue-btn { padding: 15px 30px; border: none; background-color: blue;  border-radius: 20px; font-size: 18px; cursor: pointer; transition: background-color 0.3s; }
+        .continue-btn:hover { background-color: grey; }
+        .header { display: flex; align-items: center; margin-bottom: 30px; }
+        .header i { cursor: pointer; font-size: 24px; margin-right: 10px; }
+        .header h4 { margin: 0; }
+        .navbar { width: 100%; position: fixed; top: 0; z-index: 1000; }
+        .top-up-content { display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1; width: 100%; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="margin-top: 20px;">
+            <!-- Navbar brand/logo -->
+            <a class="navbar-brand" style="margin-left: 90px;" href="/homepage.html"><b>Block Tech</b></a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: blue;" href="/homepage.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/dashboard.html">DashBoard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/top-up.html">Wallet</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="bitcoin.html">Exchange</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="security.html">Security</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="auth-buttons">
+                    <li class="nav-item">
+                        <a class="btn btn-white" style="width: 140px; border: 2px solid #007bff; color: #007bff; margin-right: 10px; border-radius: 5px" href="/login.html">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" style="width: 140px; border-radius: 5px" href="/signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="top-up-content">
+        <div class="header" style="margin-right:80%; margin-top:2%;">
+            <i class="bi bi-arrow-left" href="/homepage.html" onclick="backhome()"></i>
+            <h4>Top up E wallet</h4>
+        </div>
+        <div class="container" style="text-align: center; background-color: #fff; padding: 40px; border-radius: 20px; width: 30%;max-width: 600px; margin-top: 20px;">
+            <h4>Enter the amount you would like <br>to top up</h4>
+            <br>
+            <div class="input-box">
+                <span>$</span>
+                <input type="text" id="amount" placeholder="---" readonly>
+            </div>
+            <div class="buttons">
+                <button onclick="setAmount(10)">$10</button>
+                <button onclick="setAmount(20)">$20</button>
+                <button onclick="setAmount(500)">$500</button>
+                <button onclick="setAmount(100)">$100</button>
+                <button onclick="setAmount(200)">$200</button>
+                <button onclick="setAmount(250)">$250</button>
+                <button onclick="setAmount(750)">$750</button>
+                <button onclick="setAmount(1000)">$1000</button>
+            </div>
+            <button class="continue-btn" onclick="continueTopUp()">Continue</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

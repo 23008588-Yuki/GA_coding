@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AML Detection Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .alert { color: red; }
+    </style>
+</head>
+<body>
+    <h1>AML Detection Dashboard</h1>
+    <div id="alerts"></div>
+
+    <script>
+        function displayAlerts(alerts) {
+            const alertsDiv = document.getElementById('alerts');
+            alertsDiv.innerHTML = '';
+            alerts.forEach(alert => {
+                const alertElem = document.createElement('p');
+                alertElem.textContent = alert;
+                alertElem.className = 'alert';
+                alertsDiv.appendChild(alertElem);
+            });
+        }
+
+        // Example alerts
+        const exampleAlerts = [
+            'Suspicious transaction amount: $15000',
+            'Transaction to known illicit address: 0x123...'
+        ];
+        displayAlerts(exampleAlerts);
+
+
+// Example function to fetch blockchain transactions
+async function fetchTransactions(address) {
+    const response = await fetch(`https://api.blockchain.com/v3/transactions?address=${address}`);
+    const data = await response.json();
+    return data.transactions;
+}
+
+// Example function to analyze transactions for AML
+function analyzeTransactions(transactions) {
+    let alerts = [];
+    transactions.forEach(transaction => {
+        // Basic rules
+        if (transaction.amount > 10000) {
+            alerts.push(`Suspicious transaction amount: $${transaction.amount}`);
+        }
+
+        // Example: Check for known illicit addresses (dummy data)
+        const illicitAddresses = ['0x123...', '0x456...'];
+        if (illicitAddresses.includes(transaction.to)) {
+            alerts.push(`Transaction to known illicit address: ${transaction.to}`);
+        }
+    });
+
+    return alerts;
+}
+
+// Example usage
+(async () => {
+    const address = '0xYourAddress';
+    const transactions = await fetchTransactions(address);
+    const alerts = analyzeTransactions(transactions);
+    console.log(alerts);
+})();
+
+    </script>
+</body>
+</html>

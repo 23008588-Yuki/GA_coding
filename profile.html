@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Profile Page</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .stat-item:not(:first-child) {
+            border-left: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="margin-top: 20px;">
+            <!-- Navbar brand/logo -->
+            <a class="navbar-brand" style="margin-left: 90px;" href="/homepage.html"><b>Block Tech</b></a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: blue;" href="/homepage.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/dashboard.html">DashBoard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/top-up.html">Wallet</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="bitcoin.html">Exchange</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="security.html">Security</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="auth-buttons">
+                    <li class="nav-item">
+                        <a class="btn btn-white" style="width: 140px; border: 2px solid #007bff; color: #007bff; margin-right: 10px; border-radius: 5px" href="/login.html">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" style="width: 140px; border-radius: 5px" href="/signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 50px;">
+        <h2 class="mb-4">Profile Information</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Name:</strong> <span id="display-name"></span></li>
+            <li class="list-group-item"><strong>Email:</strong> <span id="display-email"></span></li>
+            <li class="list-group-item"><strong>Password:</strong> <span id="display-password"></span></li>
+            <li class="list-group-item"><strong>Country:</strong> <span id="display-country"></span></li>
+        </ul>
+    </div>
+
+    <script src="script.js">
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+        //     if (currentUser) {
+        //         document.getElementById('display-name').textContent = currentUser.name || 'N/A';
+        //         document.getElementById('display-email').textContent = currentUser.email || 'N/A';
+        //         document.getElementById('display-password').textContent = currentUser.password || 'N/A';
+        //         document.getElementById('display-country').textContent = currentUser.country || 'N/A';
+        //     } else {
+        //         // Redirect to signup if no user is found
+        //         window.location.href = 'signup.html';
+        //     }
+        // });
+    </script>
+</body>
+</html>

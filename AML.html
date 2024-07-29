@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AML Detection</title>
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#alerts {
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AML Detection System</h1>
+        <form id="transactionForm">
+            <div class="form-group">
+                <label for="transactionAmount">Transaction Amount</label>
+                <input type="number" id="transactionAmount" required>
+            </div>
+            <div class="form-group">
+                <label for="transactionDate">Transaction Date</label>
+                <input type="date" id="transactionDate" required>
+            </div>
+            <button type="submit">Submit Transaction</button>
+        </form>
+        <div id="alerts"></div>
+    </div>
+    <script>
+
+document.getElementById('transactionForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const amount = parseFloat(document.getElementById('transactionAmount').value);
+    const date = document.getElementById('transactionDate').value;
+
+    // Basic detection rules
+    const alertMessages = [];
+    if (amount > 10000) {
+        alertMessages.push('Suspicious transaction amount. Amount exceeds $10,000.');
+    }
+
+    // Example: Check for date (e.g., prevent future dates)
+    const today = new Date().toISOString().split('T')[0];
+    if (date > today) {
+        alertMessages.push('Suspicious transaction date. Date cannot be in the future.');
+    }
+
+    // Display alerts
+    const alertsDiv = document.getElementById('alerts');
+    alertsDiv.innerHTML = '';
+    if (alertMessages.length > 0) {
+        alertMessages.forEach(message => {
+            const alert = document.createElement('p');
+            alert.textContent = message;
+            alert.style.color = 'red';
+            alertsDiv.appendChild(alert);
+        });
+    } else {
+        const success = document.createElement('p');
+        success.textContent = 'Transaction submitted successfully.';
+        success.style.color = 'green';
+        alertsDiv.appendChild(success);
+    }
+});
+
+    </script>
+
+</body>
+</html>

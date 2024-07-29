@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Sign Up Page</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="margin-top: 20px;">
+            <!-- Navbar brand/logo -->
+            <a class="navbar-brand" style="margin-left: 90px;" href="/homepage.html"><b>Block Tech</b></a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: blue;" href="/homepage.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/dashboard.html">DashBoard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/top-up.html">Wallet</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="bitcoin.html">Exchange</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="security.html">Security</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="auth-buttons">
+                    <li class="nav-item">
+                        <a class="btn btn-white" style="width: 140px; border: 2px solid #007bff; color: #007bff; margin-right: 10px; border-radius: 5px" href="/login.html">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" style="width: 140px; border-radius: 5px" href="/signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .signup-form .form-control {
+            margin-bottom: 10px;
+            height: calc(2.25rem + 10px);
+            padding: 10px;
+        }
+        .signup-form .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top:3%;
+        }
+        .signup-form .btn-google {
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc;
+        }   
+        .signup-form .btn-google img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        .signup-form .terms {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .signup-form .terms a {
+            color: blue;
+            text-decoration: none;
+        }
+        .signup-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-left: 150px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .signup-form {
+                width: 80%;
+                margin-right: 0;
+            }
+            .signup-image {
+                width: 90%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+
+    <div style="width: 100%; padding: 10px; font-size: 16px; border-radius: 5px;">
+        <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100%; margin-top:0%;margin-right:15%;">
+            <div class="signup-form" style="width: 100%; max-width: 600px; padding: 20px; background-color: #fff;">
+                <h2 style="margin-bottom: 30px; font-size: 29px;"><b>Sign up</b></h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" class="form-control" style="margin-bottom: 10px; height: calc(2.25rem + 10px); padding: 10px;" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" class="form-control" style="margin-bottom: 10px; height: calc(2.25rem + 10px); padding: 10px;"  id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password*</label>
+                        <input type="password" class="form-control" style="margin-bottom: 10px; height: calc(2.25rem + 10px); padding: 10px;"  id="password" placeholder="Create a password" required>
+                        <small class="form-text text-muted">Must be at least 8 characters.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country of Residence*</label>
+                        <select class="form-control" id="country" required>
+                            <option value="">Select country</option>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="China">China</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Singapore">Singapore</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create account</button>
+                    <div class="terms">
+                        <input type="checkbox" required> By creating an account, you agree to Block Tech's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                    </div>
+                    <div class="text-center mt-2">
+                        Already have an account? <a href="login.html">Log in</a>
+                    </div>
+                </form>
+            </div>
+            <div class="signup-image" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+                <img src="/images/signup.png" alt="Signup illustration">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

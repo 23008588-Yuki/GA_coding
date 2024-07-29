@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Home Page</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .stat-item:not(:first-child) {
+            border-left: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="margin-top: 20px;">
+            <!-- Navbar brand/logo -->
+            <a class="navbar-brand" style="margin-left: 90px;" href="/homepage.html"><b>Block Tech</b></a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: blue;" href="/homepage.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/dashboard.html">DashBoard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/top-up.html">Wallet</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="bitcoin.html">Exchange</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="security.html">Security</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="auth-buttons">
+                    <li class="nav-item">
+                        <a class="btn btn-white" style="width: 140px; border: 2px solid #007bff; color: #007bff; margin-right: 10px; border-radius: 5px" href="/login.html">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" style="width: 140px; border-radius: 5px" href="/signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--'Welcome to Block Tech'-->
+    <div class="container">
+        <div class="row align-items-center" style="height: 80vh;">
+            <div class="col-md-6 text-section">
+                <h1><b>Welcome to <br> Block Tech!</b></h1>
+                <p>Block Tech is the safest platform to buy, sell, and <br>manage crypto. You can now fund your account
+                    with <br>SGD instantly with zero-fees.</p>
+                <a href="/signup.html" class="btn btn-primary" style="width: 130px;">Sign up</a>
+            </div>
+            <div class="col-md-6 image-section">
+                <img src="/images/cryptocurrency.png" alt="Crypto Illustration"
+                    style="width:120%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section"
+        style="text-align: center; margin-top: 3%; background-color: #f6f6f6; padding: 20px;">
+        <h2 style="margin: 0;"><b>The safe and affordable way for businesses to buy, <br> sell, and manage crypto.</b>
+        </h2>
+        <div class="stats" style="display: flex; justify-content: center; align-items: center; margin-top: 2%; ">
+            <div class="stat-item" style="padding: 0 40px">
+                <h4 style="margin: 0;">Clients</h4>
+                <p style="margin: 5px 0 0;">24,000</p>
+            </div>
+            <div class="stat-item" style="padding: 0 40px">
+                <h4 style="margin: 0;">Annual growth</h4>
+                <p style="margin: 5px 0 0;">55%</p>
+            </div>
+            <div class="stat-item" style="padding: 0 40px">
+                <h4 style="margin: 0;">Positive ratings</h4>
+                <p style="margin: 5px 0 0;">80%</p>
+            </div>
+        </div>
+    </section>
+
+    <!--'Live Market Feed'-->
+    <div class="container">
+        <div class="row align-items-center" style="height: 80vh;">
+            <div class="col-md-6 text-section">
+                <h2><b>Live Market Feed</b></h2>
+                <p>Description:</p>
+                <p>The Live Market Feed provides real-time updates on different currencies. User can
+                    view live data, including exchange rates, price changes, and market trends.</p>
+                <p>How to Access the Live Market Feed:</p>
+                <ol>
+                    <li>Sign Up/Log in: Create an account or log in to your existing account on our platform.</li>
+                    <li>Navigate to Exchange page: Go to the 'Exchange' tab on the main menu.</li>
+                    <li>Payment: Complete the payment process using your preferred payment method (credit card,
+                        ApplePay, etc).</li>
+                    <li>Access: Once payment is confirmed, you will have full access to the Live Market Feed.</li>
+                </ol>
+            </div>
+            <div class="col-md-6 image-section">
+                <img src="/images/livefeedmarket.png" alt="Live Market Feed Illustration"
+                    style="width:90%; height: auto; margin-left: 15%;">
+            </div>
+        </div>
+    </div>
+
+
+    <!--'Top Up Feature'-->
+    <div class="container">
+        <div class="row align-items-center" style="height: 80vh;">
+            <div class="col-md-6 image-section">
+                <img src="/images/top-up-feature.png" alt="Live Market Feed Illustration"
+                    style="width:90%; height: auto; margin-right: 15%;">
+            </div>
+            <div class="col-md-6 text-section">
+                <h2><b>Top-Up feature</b></h2>
+                <p>Description:</p>
+                <p>The Top-Up Feature allows users to add funds to their account seamlessly, ensuring they have
+                    the necessary balance to trade.</p>
+                <p>It allows for:</p>
+                <ul>
+                    <li>Instant top-up of account balance.</li>
+                    <li>Multiple payment methods available (credit/debit card, etc).</li>
+                    <li>Transaction history and balance tracking.</li>
+                </ul>
+                <p>How to Use the Top-Up Feature:</p>
+                <ul>
+                    <li>Sign Up/Log in: Create an account or log in to your existing account on our platform.</li>
+                    <li>Navigate to Top-Up: Go to the 'Wallet' section.</li>
+                    <li>Choose Amount: Select the amount you wish to top up.</li>
+                    <li>Select Payment Method: Choose your preferred payment method (credit/debit card, etc).</li>
+                    <li>Two Factor Authentication (2FA): Enhance security</li>
+                    <li>Complete Transaction: Your account balance will be updated instantly.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--'Partners'-->
+    <section class="partners-section" style="text-align: center; margin-top: 1%; padding: 20px;">
+        <h2 style="margin: 0;"><b>Our Partners</b></h2>
+        <div class="partners" style="display: flex; justify-content: center; align-items: center; margin-top: 2%;">
+            <div class="partner-item" style="padding: 0 40px;">
+                <img src="/images/ocbc.png" alt="OCBC">
+            </div>
+            <div class="partner-item" style="padding: 0 40px;">
+                <img src="/images/uob.png" alt="UOB">
+            </div>
+            <div class="partner-item" style="padding: 0 40px;">
+                <img src="/images/dbs.png" alt="DBS">
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <!-- Interested in Investing Section -->
+    <div id="investing-section"
+        style="background-color: #333; color: white; text-align: left; padding: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; margin: 20px; margin-left: 22%; margin-right:22%">
+        <div style="margin: 0; margin-left:5%">
+            <h3 style="margin: 0; font-size: 24px;">Interested in Investing?</h3>
+            <p style="margin: 5px 0 0; font-size: 16px;">Register your interest by signing up and our specialist will
+                get back to you.</p>
+        </div>
+        <a href="signup.html" style="background-color: white; color: #333; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; margin-right: 5%; width: 120px; text-align: center; text-decoration: none;">Sign up</a>
+    </div>
+    
+    <!-- AML Section -->
+    <div id="aml-section"
+        style="background-color: #333; text-align: left; padding: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; margin: 20px; margin-left: 22%; margin-right:22%">
+        <div style="margin: 0; margin-left:5%">
+            <a href="AML2.html"><h5 style="margin: 0; color: white; ">Anti Money Laundering Detection DashBoard</h5></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

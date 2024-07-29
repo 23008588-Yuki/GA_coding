@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <title>Secure Checkout</title>
+    <style>
+        * { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="margin-top: 20px;">
+            <!-- Navbar brand/logo -->
+            <a class="navbar-brand" style="margin-left: 90px;" href="/homepage.html"><b>Block Tech</b></a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: blue;" href="/homepage.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/dashboard.html">DashBoard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/top-up.html">Wallet</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="bitcoin.html">Exchange</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="security.html">Security</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="auth-buttons">
+                    <li class="nav-item">
+                        <a class="btn btn-white" style="width: 140px; border: 2px solid #007bff; color: #007bff; margin-right: 10px; border-radius: 5px" href="/login.html">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" style="width: 140px; border-radius: 5px" href="/signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" style="text-align: center; background-color: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 30%;max-width: 600px; margin-top: 20px;">
+        <h4>Secure Checkout</h4>
+        <p id="amountDisplay">Amount: $<span id="amount"></span></p>
+        <br>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Card Number" id="cardNumber">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Card Holder Name" id="cardHolderName">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Expiry Date (MM/YY)" id="expiryDate">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="CVV" id="cvv">
+        </div>
+        <button class="btn btn-primary" onclick="processPayment()">Pay Now</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const amount = localStorage.getItem('topUpAmount');
+            document.getElementById('amount').textContent = amount;
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

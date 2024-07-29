@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Security Measures</title>
+    <style>
+        .section {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 1200px; /* Adjust this value as needed */
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="margin-top: 20px;">
+            <!-- Navbar brand/logo -->
+            <a class="navbar-brand" style="margin-left: 90px;" href="/homepage.html"><b>Block Tech</b></a>
+            <!-- Links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: blue;" href="/homepage.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/dashboard.html">DashBoard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="/top-up.html">Wallet</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="bitcoin.html">Exchange</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 70px;">
+                        <a class="nav-link" style="color: black;" href="security.html">Security</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav" id="auth-buttons">
+                    <li class="nav-item">
+                        <a class="btn btn-white" style="width: 140px; border: 2px solid #007bff; color: #007bff; margin-right: 10px; border-radius: 5px" href="/login.html">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" style="width: 140px; border-radius: 5px" href="/signup.html">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="body" style="font-family: Arial, sans-serif; line-height: 1.6;">
+        <h3 style="margin-left:11%; margin-top:3%;"><b>Security Measures</b></h3>
+        <div class="container">
+            <div class="section">
+                <div class="icon">🔒</div>
+                <h4>Cryptographic Security</h4>
+                <ul>
+                    <li><strong>Data Encryption:</strong> All data on the blockchain is encrypted, ensuring that only authorized parties can access the information.</li>
+                    <li><strong>Digital Signatures:</strong> Participants use private and public keys to sign transactions, ensuring authenticity and non-repudiation.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="icon">🛡️</div>
+                <h4>Types of Algorithms</h4>
+                <ul>
+                    <li><strong>SHA-256:</strong> Commonly used in Bitcoin and other cryptocurrencies. It produces a 256-bit hash and is known for its security and speed.</li>
+                    <li>Used in creating block hashes and transaction IDs.</li>
+                    <li>Ensures data integrity.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="icon">📊</div>
+                <h4>Funds are being stored in cold wallets</h4>
+                <ul>
+                    <li>These wallets are not connected to the internet, making them less vulnerable to hacking and online theft.</li>
+                    <li>By distributing funds across such facilities worldwide, organizations can further mitigate risks associated with localized events, such as natural disasters or geopolitical instability, and enhance the overall resilience of their holdings.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="icon">🔗</div>
+                <h4>Keeping your crypto and data secure</h4>
+                <ul>
+                    <li>Implement MFA for access to wallets and sensitive systems.</li>
+                    <li>Complying with the AML and KYC regulations.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
